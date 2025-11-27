@@ -3,7 +3,7 @@
 A fully containerized data pipeline for ingesting, transforming, and analyzing
 daily stock market data from Alpha Vantage(http://alphavantage.com/).  
 The project uses **PostgreSQL** as the data warehouse, **dbt** for ELT
-transformation, **Apache Airflow** for orchestrating and **Plotly** for interactive financial visualizations.
+transformation, **Apache Airflow** for orchestrating, Docker for creating a containerized application and **Plotly** for interactive financial visualizations.
 
 ---
 
