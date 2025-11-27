@@ -1,0 +1,7 @@
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_alpha_vantage
+      - name: raw_dates
+

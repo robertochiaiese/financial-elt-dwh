@@ -1,0 +1,41 @@
+version: 2
+
+models:
+
+  # ----------------------------------------------------
+  # DIMENSION TABLE: dim_dates
+  # ----------------------------------------------------
+  - name: dim_dates
+    description: "Date dimension containing calendar and fiscal attributes."
+    columns:
+      - name: date_id
+        data_tests:
+          - unique
+          - not_null
+
+
+
+
+  # ----------------------------------------------------
+  # FACT TABLE: fact_prices_daily
+  # ----------------------------------------------------
+  - name: fact_prices_daily
+    description: "Daily OHLC prices and trading volume."
+    columns:
+      - name: prices_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: date_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_dates')
+              field: date_id
+
+      - name: price_trend
+        data_tests:
+          - accepted_values:
+              values: ['bullish', 'bearish', 'neutral']
+  
