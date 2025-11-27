@@ -76,15 +76,18 @@ financial-elt-dwh/
 │           ├── staging/
 │           │   ├── stg_alpha_vantage.sql
 │           │   └── stg_dates.sql
-│           └── core/
-│               ├── dim_dates.sql
-│               └── fact_prices_daily.sql
+│           ├── core/
+│           │   ├── dim_dates.sql
+│           │   └── fact_prices_daily.sql
+│           ├── sources.yml
+│           └── schema.yml
 ├── postgres/
 │   └── airflow_setup.sql
 └── scripts/
     ├── __init__.py
     ├── apirequest.py
-    └── dbConnect.py
+    ├── dbConnect.py
+    └── plot.py
 ```
 
 
