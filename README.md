@@ -3,7 +3,9 @@
 A fully containerized data pipeline for ingesting, transforming, and analyzing
 daily stock market data from Alpha Vantage(http://alphavantage.com/).  
 The project uses **PostgreSQL** as the data warehouse, **dbt** for ELT
-transformation, **Apache Airflow** for orchestrating, Docker for creating a containerized application and **Plotly** for interactive financial visualizations.
+transformation, **Apache Airflow** for orchestrating, Docker for containerization and **Plotly** for interactive financial visualizations.
+<img width="1170" height="621" alt="ELT process 2" src="https://github.com/user-attachments/assets/b252a2ae-be36-42fd-a514-c76a0de875e2" />
+
 
 ---
 
@@ -19,8 +21,8 @@ This project builds a modular analytics pipeline capable of:
 
 ---
 
-## Architecture
-<img width="1170" height="621" alt="ELT process 2" src="https://github.com/user-attachments/assets/5a9dd436-da98-44bd-93f1-d71c95be60a1" />
+## Data Architecture
+
 
 ---
 ## Business need
@@ -53,3 +55,6 @@ This project addresses that need by transforming raw market feeds into actionabl
 
 
 This project solves that need by implementing an automated ELT pipeline that turns unstructured market data into real insights.
+
+
+
