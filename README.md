@@ -20,6 +20,7 @@ This project builds a modular analytics pipeline capable of:
 ---
 
 ## Architecture
+<img width="1170" height="621" alt="ELT process 2" src="https://github.com/user-attachments/assets/5a9dd436-da98-44bd-93f1-d71c95be60a1" />
 
 ---
 ## Business need
