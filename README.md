@@ -54,7 +54,39 @@ This project addresses that need by transforming raw market feeds into actionabl
    Automatically generates dynamic candlestick + volume charts, enabling fast interpretation of market movements.
 
 
-This project solves that need by implementing an automated ELT pipeline that turns unstructured market data into real insights.
+## Project Structure
+```tree
+financial-elt-dwh/
+├── .gitattributes
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+├── requirements.txt
+├── airflow/
+│   └── dags/
+│       └── orchestrator.py
+├── data/
+│   ├── daily_data_2025-11-27.csv
+│   └── dimdates.csv
+├── dbt/
+│   └── my_project/
+│       ├── macros/
+│       │   └── generate_schema_name.sql
+│       └── models/
+│           ├── staging/
+│           │   ├── stg_alpha_vantage.sql
+│           │   └── stg_dates.sql
+│           └── core/
+│               ├── dim_dates.sql
+│               └── fact_prices_daily.sql
+├── postgres/
+│   └── airflow_setup.sql
+└── scripts/
+    ├── __init__.py
+    ├── apirequest.py
+    └── dbConnect.py
+```
+
 
 
 
