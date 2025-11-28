@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: raw_alpha_vantage
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: open
+        tests:
+          - not_null
+      - name: close
+        tests:
+          - not_null
+      - name: volume
+        tests:
+          - not_null
