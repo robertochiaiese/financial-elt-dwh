@@ -86,11 +86,23 @@ financial-elt-dwh/
 │           └── schema.yml
 ├── postgres/
 │   └── airflow_setup.sql
-└── scripts/
-    ├── __init__.py
-    ├── apirequest.py
-    ├── dbConnect.py
-    └── plot.py
+├── scripts/
+│   ├── __init__.py
+│   ├── apirequest.py
+│   ├── dbConnect.py
+│   └── plot.py
+├── tests/
+│   ├── data_quality/
+│   │   ├── fact_prices_tests.yml
+│   │   └── raw_data_schema.yml
+│   └── unit/
+│       ├── test_cleaning_function.py
+│       └── test_db_connection.py
+└── docs/
+    ├── Data_architecture.png
+    ├── data_model.png
+    └── data_catalog.md
+
 ```
 
 
