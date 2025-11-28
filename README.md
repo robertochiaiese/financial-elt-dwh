@@ -1,8 +1,8 @@
 
-A fully containerized data pipeline for ingesting, transforming, and analyzing
-daily stock market data from Alpha Vantage(http://alphavantage.com/).  
-The project uses **PostgreSQL** as the data warehouse, **dbt** for ELT
-transformation, **Apache Airflow** for orchestrating, Docker for containerization and **Plotly** for interactive financial visualizations.
+# Market Data Analytics Pipeline
+A fully containerized data pipeline for ingesting, transforming, and analyzing daily stock market data from Alpha Vantage(http://alphavantage.com/).
+Alpha Vantage is a company that provides financial market data through APIs for stocks, foreign exchange (Forex), cryptocurrencies, and commodities.
+The project uses **PostgreSQL** as the data warehouse, **dbt** for ELT transformation, **Apache Airflow** for orchestrating, Docker for containerization and **Plotly** for interactive financial visualizations.
 <img width="1170" height="621" alt="ELT process 2" src="https://github.com/user-attachments/assets/b252a2ae-be36-42fd-a514-c76a0de875e2" />
 
 
