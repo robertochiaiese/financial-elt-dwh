@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_prices_daily
+    tests:
+      - unique:
+          column_name: price_id
+
+    columns:
+      - name: close_price
+        tests:
+          - not_null
+      - name: date_id
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: id
