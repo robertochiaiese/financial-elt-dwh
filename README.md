@@ -22,7 +22,8 @@ This project builds a modular analytics pipeline capable of:
 ---
 
 ## Data Architecture
-<img width="1111" height="540" alt="data_architecture6" src="https://github.com/user-attachments/assets/e13530c2-7a97-41cf-8eab-0c56efa983d2" />
+<img width="1132" height="540" alt="data_architecture7" src="https://github.com/user-attachments/assets/baf771c3-f887-4383-9ae2-9cf368f9ef33" />
+
 
 
 
