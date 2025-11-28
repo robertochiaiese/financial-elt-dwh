@@ -1,4 +1,4 @@
-# Market Data Analytics Pipeline
+<img width="1111" height="540" alt="data_architecture5" src="https://github.com/user-attachments/assets/33bb9929-d8f5-49c6-b8e3-5c37965d94c5" /># Market Data Analytics Pipeline
 
 A fully containerized data pipeline for ingesting, transforming, and analyzing
 daily stock market data from Alpha Vantage(http://alphavantage.com/).  
@@ -22,7 +22,7 @@ This project builds a modular analytics pipeline capable of:
 ---
 
 ## Data Architecture
-<img width="1111" height="540" alt="data_architecture5" src="https://github.com/user-attachments/assets/540e94d5-3267-4ad5-ad92-04512bdaf7ba" />
+<img width="1111" height="540" alt="data_architecture6" src="https://github.com/user-attachments/assets/e13530c2-7a97-41cf-8eab-0c56efa983d2" />
 
 
 
