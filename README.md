@@ -123,6 +123,7 @@ Business-ready models for analytics.
 <img width="812" height="203" alt="image" src="https://github.com/user-attachments/assets/c10fba3b-767b-481b-bd8e-a3800c1821f1" />
 </div>
 
+scripts/plot.py
 <img width="1208" height="444" alt="newplot (1)" src="https://github.com/user-attachments/assets/07360bb7-fb54-4209-9089-71f566aae179" />
 
 ```
