@@ -117,6 +117,28 @@ Business-ready models for analytics.
 | **dbt Models**  | `fact_prices_daily.sql` <br> `dim_dates.sql`  |
 
 
+
+## Example Output 
+<div align="center">
+<img width="812" height="203" alt="image" src="https://github.com/user-attachments/assets/c10fba3b-767b-481b-bd8e-a3800c1821f1" />
+</div>
+
+<img width="1208" height="444" alt="newplot (1)" src="https://github.com/user-attachments/assets/07360bb7-fb54-4209-9089-71f566aae179" />
+
+```
+  --- STOCK ANALYSIS REPORT ---
+
+    The stock is trending UP.
+    Today’s volatility is within normal range.
+    Volume does not strongly confirm today's price action.
+
+    --- Comparison ---
+    Close today: 308.58
+    7-day avg: 302.03
+    30-day avg: 274.08
+```
+
+
 ## Project Structure
 ```tree
 financial-elt-dwh/
@@ -165,23 +187,6 @@ financial-elt-dwh/
 
 ```
 
-
-
-## Example Output 
-<img width="1208" height="444" alt="newplot (1)" src="https://github.com/user-attachments/assets/07360bb7-fb54-4209-9089-71f566aae179" />
-
-```
-  --- STOCK ANALYSIS REPORT ---
-
-    The stock is trending UP.
-    Today’s volatility is within normal range.
-    Volume does not strongly confirm today's price action.
-
-    --- Comparison ---
-    Close today: 308.58
-    7-day avg: 302.03
-    30-day avg: 274.08
-```
 
 ## How to Run Locally
 ### 1. Clone the repo
