@@ -1,0 +1,12 @@
+my_project:
+  outputs:
+    dev:
+      dbname: marketdata
+      host: db
+      pass: password
+      port: 5432
+      schema: dev
+      threads: 4
+      type: postgres
+      user: roberto
+  target: dev
