@@ -126,6 +126,7 @@ Business-ready models for analytics.
 
 <img width="1208" height="444" alt="newplot (1)" src="https://github.com/user-attachments/assets/07360bb7-fb54-4209-9089-71f566aae179" />
 scripts/plot.py
+
 ```
   --- STOCK ANALYSIS REPORT ---
 
