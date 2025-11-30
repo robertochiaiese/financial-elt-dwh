@@ -8,8 +8,7 @@
 ---
 
 ## Project Overview
-This project implements a production-style ELT pipeline for ingesting daily stock market data from the Alpha Vantage API
-, storing it in a PostgreSQL data warehouse, transforming it with dbt, orchestrating workflows via Apache Airflow, and generating interactive financial visualizations using Plotly.
+This project implements an ELT pipeline for ingesting daily stock market data from the Alpha Vantage API, storing it in a PostgreSQL data warehouse, transforming it with dbt, orchestrating workflows via Apache Airflow, and generating interactive financial visualizations using Plotly.
 
 It demonstrates real-world data engineering patterns:
 
@@ -44,8 +43,7 @@ This project addresses that need by transforming raw market feeds into actionabl
    - Trend classification (bullish, bearish, neutral)
 
 4. **Interactive Visual Analysis with Plotly**  
-   Automatically generates dynamic candlestick + volume charts, enabling fast interpretation of market movements.
-
+   Generates dynamic candlestick + volume charts, enabling fast interpretation of market movements.
 
 
 
@@ -127,7 +125,20 @@ financial-elt-dwh/
 
 
 ## Example Output 
+<img width="1208" height="444" alt="newplot (1)" src="https://github.com/user-attachments/assets/07360bb7-fb54-4209-9089-71f566aae179" />
 
+```
+  --- STOCK ANALYSIS REPORT ---
+
+    The stock is trending UP.
+    Today’s volatility is within normal range.
+    Volume does not strongly confirm today's price action.
+
+    --- Comparison ---
+    Close today: 308.58
+    7-day avg: 302.03
+    30-day avg: 274.08
+```
 
 ## How to Run Locally
 ### 1. Clone the repo
