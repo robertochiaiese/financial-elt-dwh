@@ -25,7 +25,8 @@ It demonstrates real-world data engineering patterns:
 ---
 
 ## Data Architecture
-<img width="1132" height="540" alt="Diagramma senza titolo drawio" src="https://github.com/user-attachments/assets/b89b5375-47f0-4728-8858-d4a1bf39765f" />
+<img width="1132" height="540" alt="Data_architecture" src="https://github.com/user-attachments/assets/d433c2b8-95ed-4031-bd6d-8043dfe22835" />
+
 
 This project addresses that need by transforming raw market feeds into actionable information through an automated ELT workflow. This pipeline delivers:
 
@@ -73,6 +74,45 @@ Numbers alone don’t answer the questions that actually guide decisions:
 ### Local Supporting Data
 
 dimdates.csv → custom date dimension
+
+
+## Data Warehouse Layers
+
+### Raw Layer (Bronze)
+
+Contains raw CSV/API data with no transformations.
+
+| Attribute       | Details                                         |
+|-----------------|------------------------------------------------|
+| **Object Type** | Tables                                         |
+| **Transformations** | None                                       |
+| **Purpose**     | Preserve source-of-truth data exactly as delivered |
+| **Tables**      | `raw.raw_alpha_vantage` <br> `raw.raw_dates`   |
+
+---
+
+###  Staging Layer (Silver)
+
+Standardizes formats and enforces consistency.
+
+| Attribute       | Details                                         |
+|-----------------|------------------------------------------------|
+| **Object Type** | Tables                                         |
+| **Transformations Include** | - Type casting (numeric, timestamps) <br> - Column renaming <br> - Alignment to analysis-ready format  <br> - Cleaning source inconsistencies <br> - Normalization of structure <br>  |
+| **dbt Models**  | `stg_alpha_vantage.sql` <br> `stg_dates.sql`  |
+
+---
+
+###  Core Layer (Gold)
+
+Business-ready models for analytics.
+
+| Attribute       | Details                                         |
+|-----------------|------------------------------------------------|
+| **Object Type** | Views & Tables                                 |
+| **Transformations Include** | - Daily price metrics <br> - % price change <br> - Volatility indicators <br> - Moving averages <br> - Trend classification (bullish, bearish, neutral) |
+| **dbt Models**  | `fact_prices_daily.sql` <br> `dim_dates.sql`  |
+
 
 ## Project Structure
 ```tree
