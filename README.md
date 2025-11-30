@@ -191,7 +191,7 @@ financial-elt-dwh/
 ## How to Run Locally
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/financial-elt-dwh.git
+git clone https://github.com/robertochiaiese/financial-elt-dwh.git
 ```
 ### 2. Start the environment
 ```bash
