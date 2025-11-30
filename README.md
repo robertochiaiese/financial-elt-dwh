@@ -1,42 +1,32 @@
 
 # Market Data Analytics Pipeline
-A fully containerized data pipeline for ingesting, transforming, and analyzing daily stock market data from Alpha Vantage(http://alphavantage.com/).
-Alpha Vantage is a company that provides financial market data through APIs for stocks, foreign exchange (Forex), cryptocurrencies, and commodities.
-The project uses **PostgreSQL** as the data warehouse, **dbt** for ELT transformation, **Apache Airflow** for orchestrating, Docker for containerization and **Plotly** for interactive financial visualizations.
+*A fully containerized ELT pipeline for financial market data analytics.*
+
 <img width="1170" height="621" alt="ELT process 2" src="https://github.com/user-attachments/assets/b252a2ae-be36-42fd-a514-c76a0de875e2" />
 
 
 ---
 
 ## Project Overview
+This project implements a production-style ELT pipeline for ingesting daily stock market data from the Alpha Vantage API
+, storing it in a PostgreSQL data warehouse, transforming it with dbt, orchestrating workflows via Apache Airflow, and generating interactive financial visualizations using Plotly.
 
-This project builds a modular analytics pipeline capable of:
+It demonstrates real-world data engineering patterns:
 
-- ingesting raw market data,
-- transforming it into clean analytical models using dbt,
-- producing business-oriented metrics and dashboards,
-- enabling reproducible financial data analysis.
+   - Automated daily data ingestion
 
+   - Raw → Staging → Core data modeling
+
+   - Data quality validation
+
+   - Reproducible analysis environment with Docker
+
+   - Clean analytical tables for downstream BI or ML tasks
 
 ---
 
 ## Data Architecture
 <img width="1132" height="540" alt="Diagramma senza titolo drawio" src="https://github.com/user-attachments/assets/b89b5375-47f0-4728-8858-d4a1bf39765f" />
-
-
-
-
-
----
-## Business need
-
-Financial analysts, traders, and individual investors often face a recurring problem: they have access to raw market data, but not to meaningful insight. 
-Numbers alone don’t answer the questions that actually guide decisions:
-
-- **Is the stock trending up or down?**
-- **Was today unusually volatile?**
-- **Does trading volume confirm the price movement?**
-- **How does today compare to last week or last month?**
 
 This project addresses that need by transforming raw market feeds into actionable information through an automated ELT workflow. This pipeline delivers:
 
@@ -56,6 +46,35 @@ This project addresses that need by transforming raw market feeds into actionabl
 4. **Interactive Visual Analysis with Plotly**  
    Automatically generates dynamic candlestick + volume charts, enabling fast interpretation of market movements.
 
+
+
+
+---
+## Business need
+
+Financial analysts, traders, and individual investors often face a recurring problem: they have access to raw market data, but not to meaningful insight. 
+Numbers alone don’t answer the questions that actually guide decisions:
+
+- **Is the stock trending up or down?**
+- **Was today unusually volatile?**
+- **Does trading volume confirm the price movement?**
+- **How does today compare to last week or last month?**
+
+## Data Sources
+
+### Alpha Vantage — TIME_SERIES_DAILY_ADJUSTED
+
+   - Stock price OHLC values
+
+   - Adjusted close
+
+   - Trading volume
+
+   - Timestamps
+
+### Local Supporting Data
+
+dimdates.csv → custom date dimension
 
 ## Project Structure
 ```tree
@@ -106,5 +125,24 @@ financial-elt-dwh/
 ```
 
 
+
+## Example Output 
+
+
+## How to Run Locally
+### 1. Clone the repo
+```bash
+git clone https://github.com/yourusername/financial-elt-dwh.git
+```
+### 2. Start the environment
+```bash
+docker-compose up --build
+```
+
+### 3. Access components
+
+   - Airflow UI: http://localhost:8000
+   - PostgreSQL: localhost:5432
+   - dbt project: /dbt/my_project
 
 
