@@ -157,7 +157,9 @@ financial-elt-dwh/
 │   ├── daily_data_2025-11-27.csv
 │   └── dimdates.csv
 ├── dbt/
+|   ├── profiles.yml
 │   └── my_project/
+|       ├──dbt_project.yml
 │       ├── macros/
 │       │   └── generate_schema_name.sql
 │       └── models/
